@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: python-app
+spec:
+  selector:
+    app: python-app
+  type: LoadBalancer
+  ports:
+    - name: python-poprt
+      port: 80
+      targetPort: 8081
